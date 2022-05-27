@@ -15,5 +15,10 @@ export class PaisService {
   buscarPais(termino: string): Observable<Country[]> {
     const url = `${this.baseUrl}/name/${termino}`;
     return this.http.get<Country[]>(url);
-   }
+  }
+
+  buscarCapital(termino: string): Observable<Country[]> {
+    const url = `${this.baseUrl}/capital/${termino}`;
+    return this.http.get<Country[]>(url);
+  }
 }
